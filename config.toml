@@ -25,11 +25,11 @@ enableRobotsTXT = true
 
   [params.logo]
     main = "img/logo/logo.svg"
-    alt = "Tella Logo"
+    alt = "Swayzee Economic Development Corporation Logo"
 
     # The size parameter is the class name of tailwindcss
     # https://tailwindcss.com/
-    size = "h-14"
+    size = "h-24"
 
   [params.site]
     name = "Swayzee Economic Development Corp."
@@ -68,11 +68,11 @@ enableRobotsTXT = true
     weight = 4
 
   # Footer Menu
-  [[menu.footer]]
-    name = "Home"
-    url = "/"
-    pre = "<i class='fa-sharp fa-solid fa-house'></i>"
-      weight = 1
+#  [[menu.footer]]
+#    name = "Home"
+#    url = "/"
+#    pre = "<i class='fa-sharp fa-solid fa-house'></i>"
+#      weight = 1
 
 #  [[menu.footer]]
 #    name = "Github"
