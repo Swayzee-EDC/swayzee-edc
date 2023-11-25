@@ -129,4 +129,6 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+# other files
 resources
+.hugo_build.lock
