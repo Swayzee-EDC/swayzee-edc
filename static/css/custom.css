@@ -1,0 +1,13 @@
+/* 
+ This CSS file is used to override the existing styles of the theme.
+ You can change the article headings, fonts, colors, etc.
+*/
+
+#overlay {
+    background-color: #41a1ad;
+}
+
+.personnel-wrapper img 
+{
+    margin: 0;
+}

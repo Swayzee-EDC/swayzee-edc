@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Building the future...",
+    "image": "img/slide/main-street.jpg",
+    "color": "text-black"
+  },
+  {
+    "title": "Revitalizing our community...",
+    "image": "img/slide/family.jpg"
+  },
+  {
+    "title": "The only Swayzee in the world.",
+    "image": "img/slide/water-tower.png"
+  }
+]
