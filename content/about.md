@@ -9,14 +9,7 @@ author = "Swayzee EDC"
 The **Swayzee Economic Development Corporation** is dedicated to bringing growth and beauty to the town of Swayzee, IN.
 
 ### Officers
-- Don Thompson, President
-- John Key, Vice President
-- Wayne Westgate, Treasurer
-- Lisa Boswell, Secretary
+{{< personnel src="officers" >}}
 
 ### Board members
-- Marilyn Watts
-- Kip Worrel
-- Mike Shrock
-- Harold King
-- Rhonda Fagan, *ex officio*
+{{< personnel src="board-members" >}}

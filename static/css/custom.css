@@ -6,3 +6,8 @@
 #overlay {
     background-color: #41a1ad;
 }
+
+.personnel-wrapper img 
+{
+    margin: 0;
+}

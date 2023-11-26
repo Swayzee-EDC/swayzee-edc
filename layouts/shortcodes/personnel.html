@@ -1,0 +1,12 @@
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 items-center personnel-wrapper">
+    {{ $data := index .Site.Data (.Get "src") }}
+    {{ range $data }}
+    <div class="grid grid-cols-1 justify-items-center text-center m-4 duration-300 transform h-full hover:-translate-y-1 hover:shadow-lg">
+        <div><img class="w-40 h-40 pt-4 rounded-full" src="{{ or .image "/img/logo/icon.svg" }}" alt=""></div>
+        <div class="font-medium">
+            <div>{{ .name }}</div>
+            <div class="text-sm text-gray-500 dark:text-gray-400">{{ or .title "&#8239;" | safeHTML }}</div>
+        </div>
+    </div>
+    {{ end }}
+</div>
