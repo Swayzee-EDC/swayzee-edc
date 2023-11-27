@@ -1,9 +1,10 @@
-<form name="contact" netlify netlify-honeypot="extra-details" data-netlify-recaptcha="true">
+<form name="contact" method="POST" netlify netlify-honeypot="extra-details" data-netlify-recaptcha="true">
+    <input type="hidden" name="subject" value="New contact submission for %{siteName} (%{submissionId})" />
     <div class="input">
         <input type="text" placeholder="Name" name="name" class="p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500" required>
     </div>
     <div class="input">
-        <input type="text" placeholder="E-mail" name="e-mail" class="p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500" required>
+        <input type="text" placeholder="E-mail" name="email" class="p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500" required>
     </div>
     <div class="input">
         <input type="text" placeholder="Title" name="title" class="p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500" required>
