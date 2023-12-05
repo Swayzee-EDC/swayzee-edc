@@ -29,7 +29,7 @@ enableRobotsTXT = true
 
     # The size parameter is the class name of tailwindcss
     # https://tailwindcss.com/
-    size = "h-24"
+    size = "lg:h-24 md:h-24 h-20"
 
   [params.site]
     name = "Swayzee EDC"
@@ -50,16 +50,22 @@ enableRobotsTXT = true
 [menu]
 
   [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 1
+    weight = 2
 
   [[menu.main]]
     identifier = "news"
     name = "News"
     url = "/news/"
-    weight = 2
+    weight = 3
 
   [[menu.main]]
     identifier = "contact"

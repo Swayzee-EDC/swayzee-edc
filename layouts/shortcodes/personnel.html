@@ -20,9 +20,9 @@
                 <source loading="lazy" srcset="{{ $image_webp.Permalink }}" type="image/webp" alt="{{ $name }}">
                 {{ end }}
                 {{ if $image_fit }}
-                <img class="w-60 h-60 rounded-full" loading="lazy" src="{{ $image_fit.Permalink }}" alt="{{ $name }}">
+                <img class="w-60 aspect-square rounded-full" loading="lazy" src="{{ $image_fit.Permalink }}" alt="{{ $name }}">
                 {{ else }}
-                <img class="w-60 h-60 rounded-full" loading="lazy" src="{{ $image.Permalink }}" alt="{{ $name }}">
+                <img class="w-60 aspect-square rounded-full" loading="lazy" src="{{ $image.Permalink }}" alt="{{ $name }}">
                 {{ end }}
             </picture>
         </div>
