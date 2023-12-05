@@ -1,5 +1,5 @@
 <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 items-center personnel-wrapper">
-    {{ $logo := resources.Get "images/icon.svg" }}
+    {{ $logo := resources.Get "images/icon-white.svg" }}
     {{ $data := index .Site.Data (.Get "src") }}
     {{ range $data }}
     <div class="grid grid-cols-1 justify-items-center text-center m-4">
@@ -9,7 +9,7 @@
         {{ $image_webp := false }}
         {{ $image_fit := false }}
         {{ if $image }}
-          {{ $image_fit = $image.Fit "1000x1000" | resources.Fingerprint }}
+          {{ $image_fit = $image.Fit "1000x1000 jpg q90" | resources.Fingerprint }}
           {{ $image_webp = $image.Fit "1000x1000 webp" | resources.Fingerprint }}
           {{ $image = $image | resources.Fingerprint }}
         {{ end }}

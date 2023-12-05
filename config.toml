@@ -24,7 +24,7 @@ enableRobotsTXT = true
   googleFonts = true
 
   [params.logo]
-    main = "img/logo/logo.svg"
+    main = "images/logo.svg"
     alt = "Swayzee Economic Development Corporation Logo"
 
     # The size parameter is the class name of tailwindcss
@@ -43,7 +43,7 @@ enableRobotsTXT = true
     meta_og_title = "Swayzee Economic Development Corporation"
     meta_og_type = "website"
     meta_og_url = "https://swayzee-edc.netlify.app/"
-    meta_og_image = "https://swayzee-edc.netlify.app/img/logo-banner-v1.png"
+    meta_og_image = "https://swayzee-edc.netlify.app/images/logo-banner-v1.png"
     meta_og_description = "The only Swayzee in the world."
     meta_twitter_card = "summary_large_image"
 

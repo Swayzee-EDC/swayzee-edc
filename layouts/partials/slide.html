@@ -1,0 +1,21 @@
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        {{ range .Site.Data.slide }}
+        <div class="swiper-slide">
+            {{ $image := .image }}
+            {{ $image = resources.Get $image }}
+            {{ $image_webp := $image.Fit "1920x1920 webp q80" | resources.Fingerprint }}
+            {{ $image = $image.Fit "1920x1920 jpg q90" | resources.Fingerprint }}
+            <picture>
+                <source loading="lazy" srcset="{{ $image_webp.Permalink }}" type="image/webp" alt="">
+                <img loading="lazy" src="{{ $image.Permalink }}" alt="">
+            </picture>
+            <div class="s-fade-txt">
+                <h1 class="text-4xl {{ or .color "text-white" }}">{{ .title }}</h1>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>

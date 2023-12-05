@@ -1,5 +1,5 @@
 +++
-aliases = ["news", "articles", "blog", "showcase", "docs"]
+aliases = ["news", "articles"]
 title = "News"
 author = "Swayzee EDC"
 tags = ["index"]
