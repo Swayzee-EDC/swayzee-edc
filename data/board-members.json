@@ -1,10 +1,20 @@
 [
     {
+        "name": "Kenny Cates"
+    },
+    {
         "name": "Rhonda Fagan",
         "title": "Ex officio"
     },
     {
         "name": "Harold King"
+    },
+    {
+        "name": "Seth Parker",
+        "image": "images/personnel/Parker-Seth.png"
+    },
+    {
+        "name": "Derek Patterson"
     },
     {
         "name": "Mike Shrock"
@@ -14,5 +24,8 @@
     },
     {
         "name": "Kip Worrel"
+    },
+    {
+        "name": "John Zwirn"
     }
 ]

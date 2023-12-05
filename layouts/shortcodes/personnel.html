@@ -1,8 +1,31 @@
 <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 items-center personnel-wrapper">
+    {{ $logo := resources.Get "images/icon.svg" }}
     {{ $data := index .Site.Data (.Get "src") }}
     {{ range $data }}
-    <div class="grid grid-cols-1 justify-items-center text-center m-4 duration-300 transform h-full hover:-translate-y-1 hover:shadow-lg">
-        <div><img class="w-40 h-40 pt-4 rounded-full" src="{{ or .image "/img/logo/icon.svg" }}" alt=""></div>
+    <div class="grid grid-cols-1 justify-items-center text-center m-4">
+        {{ $image := .image }}
+        {{ $name := .name }}
+        {{ $image = resources.Get $image }}
+        {{ $image_webp := false }}
+        {{ $image_fit := false }}
+        {{ if $image }}
+          {{ $image_fit = $image.Fit "1000x1000" | resources.Fingerprint }}
+          {{ $image_webp = $image.Fit "1000x1000 webp" | resources.Fingerprint }}
+          {{ $image = $image | resources.Fingerprint }}
+        {{ end }}
+        {{ $image = default $image $logo }}
+        <div class="pt-4">
+            <picture>
+                {{ with $image_webp }}
+                <source loading="lazy" srcset="{{ $image_webp.Permalink }}" type="image/webp" alt="{{ $name }}">
+                {{ end }}
+                {{ if $image_fit }}
+                <img class="w-60 h-60 rounded-full" loading="lazy" src="{{ $image_fit.Permalink }}" alt="{{ $name }}">
+                {{ else }}
+                <img class="w-60 h-60 rounded-full" loading="lazy" src="{{ $image.Permalink }}" alt="{{ $name }}">
+                {{ end }}
+            </picture>
+        </div>
         <div class="font-medium">
             <div>{{ .name }}</div>
             <div class="text-sm text-gray-500 dark:text-gray-400">{{ or .title "&#8239;" | safeHTML }}</div>
