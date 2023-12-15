@@ -4,7 +4,8 @@
     },
     {
         "name": "Rhonda Fagan",
-        "title": "Ex officio"
+        "title": "Ex officio",
+        "image": "images/personnel/Fagan-Rhonda.png"
     },
     {
         "name": "Harold King"
@@ -20,7 +21,8 @@
         "name": "Mike Shrock"
     },
     {
-        "name": "Marilyn Watts"
+        "name": "Marilyn Watts",
+        "image": "images/personnel/Watts-Marilyn.png"
     },
     {
         "name": "Kip Worrel"
