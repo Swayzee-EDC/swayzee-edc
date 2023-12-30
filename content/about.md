@@ -6,7 +6,11 @@ aliases = ["about-us"]
 author = "Swayzee EDC"
 +++
 
-The **Swayzee Economic Development Corporation** is dedicated to bringing growth and beauty to the town of Swayzee, IN.
+The goal of the **Swayzee Economic Development Corporation** is to encourage Swayzee's 
+economic and community development through the retention, expansion, and attraction 
+of local businesses. Launched in February 2023 by a group of citizens who wanted to 
+assist the town board in improving the community, the Swayzee EDC was incorporated as 
+a 501(c)(3) non-profit in August 2023.
 
 ### Officers
 {{< personnel src="officers" >}}

@@ -1,5 +1,5 @@
 <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 items-center personnel-wrapper">
-    {{ $logo := resources.Get "images/icon-white.svg" }}
+    {{ $logo := resources.Get "images/icon-white.svg" | minify | resources.Fingerprint }}
     {{ $data := index .Site.Data (.Get "src") }}
     {{ range $data }}
     <div class="grid grid-cols-1 justify-items-center text-center m-4">
