@@ -1,18 +1,18 @@
 [
   {
-    "title": "Simple",
+    "title": "A community effort",
+    "description": "Founded by local citizens for local citizens, the Swayzee EDC is dedicated to enhancing our community's quality of life.",
+    "icon": "iconextra-family"
+  },
+  {
+    "title": "Attracting businesses",
     "description": "All the bare necessities are there.",
-    "icon": "icon-desktop_windows"
+    "icon": "iconextra-office"
   },
   {
-    "title": "Fast",
-    "description": "Light weight and fast loading speed.",
-    "icon": "icon-lightbulb_outline"
-  },
-  {
-    "title": "Github",
-    "description": "Please fork the Github repository and contribute to this theme!",
-    "icon": "icon-github",
-    "link": "/"
+    "title": "Get involved",
+    "description": "Interested in helping out? Fill out our contact form to find out how you can help shape Swayzee's future!",
+    "icon": "iconextra-handshake",
+    "link": "contact/"
   }
 ]

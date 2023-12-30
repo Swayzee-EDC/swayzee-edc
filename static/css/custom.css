@@ -18,3 +18,43 @@
     margin-top: 0;
     margin-bottom: 1rem;
 }
+
+/* icomoon_extra */
+
+@font-face {
+    font-family: 'icomoon_extra';
+    src:  url('./fonts/icomoon_extra.eot?ldk2ik');
+    src:  url('./fonts/icomoon_extra.eot?ldk2ik#iefix') format('embedded-opentype'),
+      url('./fonts/icomoon_extra.ttf?ldk2ik') format('truetype'),
+      url('./fonts/icomoon_extra.woff?ldk2ik') format('woff'),
+      url('./fonts/icomoon_extra.svg?ldk2ik#icomoon_extra') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="iconextra-"], 
+[class*="iconextra-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon_extra' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.iconextra-handshake:before {
+    content: "\e900";
+}
+.iconextra-family:before {
+    content: "\e901";
+}
+.iconextra-office:before {
+    content: "\e903";
+}
