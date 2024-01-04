@@ -12,7 +12,7 @@ of local businesses. Launched in February 2023 by a group of citizens who wanted
 assist the town board in improving the community, the Swayzee EDC was incorporated as 
 a 501(c)(3) non-profit in August 2023.
 
-### Officers
+## Leadership
 {{< personnel src="officers" >}}
 
 ### Board members

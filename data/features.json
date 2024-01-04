@@ -1,13 +1,14 @@
 [
   {
-    "title": "A community effort",
-    "description": "Founded by local citizens for local citizens, the Swayzee EDC is dedicated to enhancing our community's quality of life.",
-    "icon": "iconextra-family"
+    "title": "Sustainable growth",
+    "description": "We exist to build bridges with local and regional investment partners in order to retain, expand, and attract local businesses.",
+    "icon": "iconextra-office"
   },
   {
-    "title": "Attracting businesses",
-    "description": "All the bare necessities are there.",
-    "icon": "iconextra-office"
+    "title": "A community effort",
+    "description": "Founded by local citizens for local citizens, the Swayzee EDC is dedicated to enhancing our community's quality of life.",
+    "icon": "iconextra-family",
+    "link": "about/#leadership"
   },
   {
     "title": "Get involved",
