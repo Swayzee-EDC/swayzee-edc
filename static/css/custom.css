@@ -19,6 +19,21 @@
     margin-bottom: 1rem;
 }
 
+/* share */
+.share-button {
+    border-radius: 0.375rem;
+}
+
+.x-twitter
+{
+    background-color: black;
+}
+
+.url 
+{
+    background-color: green;
+}
+
 .footnotes
 {
     font-size: 1rem; /* 16px */
