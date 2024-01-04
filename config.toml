@@ -1,5 +1,6 @@
 baseURL = "https://onlyswayzee.org/"
 title = "Swayzee Economic Development Corporation"
+copyright = "Swayzee Economic Development Corporation"
 author = "Swayzee EDC"
 languageCode = "en"
 DefaultContentLanguage = "en"
@@ -31,8 +32,11 @@ enableRobotsTXT = true
     # https://tailwindcss.com/
     size = "lg:h-24 md:h-24 h-20"
 
-  [params.site]
-    name = "Swayzee EDC"
+  [params.footer]
+    name = "Swayzee Economic Development Corporation"
+    address_line1 = "213 S Washington Street"
+    address_line2 = "PO Box 85"
+    address_line3 = "Swayzee, IN 46986"
 
   [params.icon]
     #If you want to use FontAwesome, set this parameter to true.

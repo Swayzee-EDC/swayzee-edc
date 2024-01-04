@@ -8,12 +8,12 @@
     "title": "A community effort",
     "description": "Founded by local citizens for local citizens, the Swayzee EDC is dedicated to enhancing our community's quality of life.",
     "icon": "iconextra-family",
-    "link": "about/#leadership"
+    "link": "/about#the-swayzee-edc"
   },
   {
     "title": "Get involved",
     "description": "Interested in helping out? Fill out our contact form to find out how you can help shape Swayzee's future!",
     "icon": "iconextra-handshake",
-    "link": "contact/"
+    "link": "/contact"
   }
 ]
