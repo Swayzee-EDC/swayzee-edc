@@ -6,7 +6,7 @@ aliases = ["about-us"]
 author = "Swayzee EDC"
 +++
 
-**Swayzee, IN** is a friendly town in northeast Indiana with easy access to 
+**Swayzee, Indiana,** is a friendly town in northeast Indiana with easy access to 
 Kokomo to the west and Marion to the east. Lying along Indiana SR 13 near its 
 junction with U.S. Route 35, Swayzee is conveniently situated within an hour of 
 both Indianapolis and Fort Wayne. Come see for yourself all that Swayzee has to 

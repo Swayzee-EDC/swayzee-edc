@@ -26,7 +26,7 @@ are right for our town.
 
 We view the Swayzee EDC as a community effort, and we would love for you to 
 participate in our work! The Swayzee EDC board meets monthly in the Swayzee 
-Town Hall, usually on the next to last Thursday of each month.[^1] If you would
+Town Hall, usually on the third Thursday of each month.[^1] If you would
 like to attend, please fill out our [contact form](/contact) to find out the 
 date and time of our next meeting.
 
