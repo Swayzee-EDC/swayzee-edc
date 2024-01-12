@@ -2,14 +2,19 @@
     <div class="swiper-wrapper">
         {{ range .Site.Data.slide }}
         <div class="swiper-slide">
+            {{ $title := .title }}
             {{ $image := .image }}
             {{ $image = resources.Get $image }}
-            {{ $image_webp := $image.Fit "1920x1920 webp q80" | resources.Fingerprint }}
-            {{ $image = $image.Fit "1920x1920 jpg q90" | resources.Fingerprint }}
-            <picture>
-                <source loading="lazy" srcset="{{ $image_webp.Permalink }}" type="image/webp" alt="">
-                <img loading="lazy" src="{{ $image.Permalink }}" alt="">
-            </picture>
+            {{ $srcs := slice }}
+            {{ $sizes := slice "600" "800" "1130" "1390" "1600" "1760" "1920" "2048" }}
+            {{ range $v := $sizes }}
+                {{ $dims := printf "%sx%s webp" $v $v}}
+                {{ $img_sm := $image.Fit $dims | resources.Fingerprint }}
+                {{ $src := printf "%s %dw" $img_sm.RelPermalink $img_sm.Width }}
+                {{ $srcs = $srcs | append $src }}
+            {{ end }}
+            {{ $image = $image.Fit "300x300 webp" | resources.Fingerprint }}
+            <img loading="lazy" src="{{ $image.RelPermalink }}" srcset="{{ delimit $srcs ", " }}" alt="{{ .title }}">
             <div class="s-fade-txt">
                 <h1 class="text-4xl {{ or .color "text-white" }}">{{ .title }}</h1>
             </div>
