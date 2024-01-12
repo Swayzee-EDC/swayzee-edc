@@ -2,16 +2,17 @@
     <div class="swiper-wrapper">
         {{ range .Site.Data.slide }}
         <div class="swiper-slide">
-            {{ $title := .title }}
             {{ $image := .image }}
             {{ $image = resources.Get $image }}
             {{ $srcs := slice }}
-            {{ $sizes := slice "600" "800" "1130" "1390" "1600" "1760" "1920" "2048" }}
+            {{ $sizes := slice 600 800 1130 1390 1600 1760 1920 2048 }}
             {{ range $v := $sizes }}
-                {{ $dims := printf "%sx%s webp" $v $v}}
-                {{ $img_sm := $image.Fit $dims | resources.Fingerprint }}
-                {{ $src := printf "%s %dw" $img_sm.RelPermalink $img_sm.Width }}
-                {{ $srcs = $srcs | append $src }}
+                {{ if lt $v $image.Width }}
+                    {{ $dims := printf "%dx%d webp" $v $v}}
+                    {{ $img_sm := $image.Fit $dims | resources.Fingerprint }}
+                    {{ $src := printf "%s %dw" $img_sm.RelPermalink $img_sm.Width }}
+                    {{ $srcs = $srcs | append $src }}
+                {{ end }}
             {{ end }}
             {{ $image = $image.Fit "300x300 webp" | resources.Fingerprint }}
             <img loading="lazy" src="{{ $image.RelPermalink }}" srcset="{{ delimit $srcs ", " }}" alt="{{ .title }}">
