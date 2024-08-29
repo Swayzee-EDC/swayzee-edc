@@ -1,5 +1,5 @@
 ---
 type: news
-title: 'Town Planning Public Forum scheduled for Sept. 11, 2024 at 6pm'
+title: Town Planning Public Forum scheduled for Sept. 11
 author: Swayzee EDC
 ---
