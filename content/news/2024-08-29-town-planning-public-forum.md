@@ -18,5 +18,3 @@ Join us for the first public forum to help define our town's priorities for grow
 **Sept. 11, 2024 at 6pm
 Swayzee Town Hall
 213 South Washington Street**
-
- 
