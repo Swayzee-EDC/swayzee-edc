@@ -15,7 +15,7 @@ export default defineStackbitConfig({
             {
               type: "page",
               name: "news",
-              label: "News",
+              label: "Post",
               urlPath: "/{slug}",
               filePath: "content/news/{slug}.md",
               fields: [
@@ -24,8 +24,7 @@ export default defineStackbitConfig({
                   { name: "author", type: "string", default: "Swayzee EDC" },
                   { label: "Publish Date", name: "date", type: "datetime" },
                   { name: "tags", type: "list", items: { "type": "string" }},
-                  { label: "Featured Image", name: "image", type: "image", required: false },
-                  { name: "content", type: "markdown" }
+                  { label: "Featured Image", name: "image", type: "image", required: false }
               ]
             }
           ],
@@ -33,7 +32,7 @@ export default defineStackbitConfig({
             referenceType: "static",
             staticDir: "static",
             uploadDir: "images/uploads",
-            publicPath: "/images/uploads"
+            publicPath: "/"
           }
         })
     ]
