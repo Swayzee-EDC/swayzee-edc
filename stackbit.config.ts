@@ -5,7 +5,6 @@ export default defineStackbitConfig({
     "stackbitVersion": "~0.6.0",
     "nodeVersion": "18",
     "ssgName": "hugo",
-    "preInstallCommand": "hostnamectl",
     "postInstallCommand": "npm i --no-save @stackbit/types @stackbit/cms-git hugo-extended@${HUGO_VERSION}",
     "devCommand": "hugo server --port {PORT}",
     "contentSources": [
