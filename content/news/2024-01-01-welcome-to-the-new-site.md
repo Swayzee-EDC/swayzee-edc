@@ -1,4 +1,5 @@
 ---
+type: news
 author: Swayzee EDC
 title: A new year, a new beginning
 description: Welcome from the Swayzee EDC
