@@ -35,5 +35,6 @@ export default defineStackbitConfig({
           }
         })
     ],
-    "postInstallCommand": "npm i --no-save @stackbit/types @stackbit/cms-git"
+    "postInstallCommand": "npm i --no-save @stackbit/types @stackbit/cms-git",
+    "devCommand": "hugo server --port {PORT} --baseURL {HOSTNAME}"
 })
