@@ -32,7 +32,7 @@ export default defineStackbitConfig({
             referenceType: "static",
             staticDir: "static",
             uploadDir: "images/uploads",
-            publicPath: "/images/uploads"
+            publicPath: "/"
           }
         })
     ]
