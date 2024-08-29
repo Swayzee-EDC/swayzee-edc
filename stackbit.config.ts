@@ -12,17 +12,17 @@ export default defineStackbitConfig({
           models: [
             {
               name: "Post",
-              type: "news",
+              type: "page",
               urlPath: "/{slug}",
               filePath: "content/news/{slug}.md",
               fields: [
-                  { label: "Title", name: "title", type: "string", required: true },
-                  { label: "Description", name: "description", type: "string" },
-                  { label: "Author", name: "author", type: "string", default: "Swayzee EDC" },
+                  { name: "title", type: "string", required: true },
+                  { name: "description", type: "string" },
+                  { name: "author", type: "string", default: "Swayzee EDC" },
                   { label: "Publish Date", name: "date", type: "datetime" },
-                  { label: "Tags", name: "tags", type: "list", required: false },
+                  { name: "tags", type: "list" },
                   { label: "Featured Image", name: "image", type: "image", required: false },
-                  { label: "Body", name: "body", widget: "markdown" }
+                  { name: "body", type: "markdown" }
               ]
             }
           ],
@@ -34,5 +34,5 @@ export default defineStackbitConfig({
           }
         })
     ],
-    "postInstallCommand": "npm i --no-save @stackbit/types"
+    "postInstallCommand": "npm i --no-save @stackbit/types @stackbit/cms-git"
 })
