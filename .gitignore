@@ -136,3 +136,6 @@ public/
 
 # VS Code
 .vscode
+
+# stackbit
+.stackbit/
