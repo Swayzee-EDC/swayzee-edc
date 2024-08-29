@@ -15,6 +15,6 @@ Ultimately, we want this 10-year plan to be an expression of our community, its 
 
 Join us for the first public forum to help define our town's priorities for growth and revitalization:
 
-**Sept. 11, 2024 at 6pm
-Swayzee Town Hall
-213 South Washington Street**
+**Sept. 11, 2024 at 6pm**\
+**Swayzee Town Hall**\
+**213 South Washington Street**
