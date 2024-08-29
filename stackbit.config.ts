@@ -11,8 +11,9 @@ export default defineStackbitConfig({
           contentDirs: ["content"],
           models: [
             {
-              name: "Post",
               type: "page",
+              name: "news",
+              label: "Post",
               urlPath: "/{slug}",
               filePath: "content/news/{slug}.md",
               fields: [
@@ -20,9 +21,9 @@ export default defineStackbitConfig({
                   { name: "description", type: "string" },
                   { name: "author", type: "string", default: "Swayzee EDC" },
                   { label: "Publish Date", name: "date", type: "datetime" },
-                  { name: "tags", type: "list" },
+                  { name: "tags", type: "list", items: { "type": "string" }},
                   { label: "Featured Image", name: "image", type: "image", required: false },
-                  { name: "body", type: "markdown" }
+                  { name: "content", type: "markdown" }
               ]
             }
           ],
