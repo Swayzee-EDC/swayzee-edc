@@ -4,8 +4,8 @@ title: Town Planning Public Forum scheduled for Sept. 11
 author: Swayzee EDC
 date: '2024-08-29T14:00:00.000Z'
 tags:
-  - 'announcement'
-  - 'meeting'
+  - announcement
+  - meeting
 description: Help shape the future of our town!
 image: /images/uploads/Public Forum 1-postcard.jpg
 ---
@@ -18,3 +18,5 @@ Join us for the first public forum to help define our town's priorities for grow
 **Sept. 11, 2024 at 6pm
 Swayzee Town Hall
 213 South Washington Street**
+
+ 
