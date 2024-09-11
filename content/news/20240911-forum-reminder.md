@@ -8,7 +8,7 @@ tags:
   - meeting
 image: /images/uploads/Public Forum 1 - fb.jpg
 ---
-Join us tonight for a public forum to help develop Swayzee's future!
+Join us tonight for a public forum to help develop Swayzee's future! We want your input to guide the development of our town's 10-year plan.
 
 **Sept. 11, 2024 at 6pm**\
 **Swayzee Town Hall**\
