@@ -35,7 +35,7 @@ enableRobotsTXT = true
   [params.banner]
     enable = true
     text = "Community survey now available! Click here!"
-    url = "news/20240913-town-survey"
+    url = "/news/20240913-town-survey"
 
   [params.footer]
     name = "Swayzee Economic Development Corporation"

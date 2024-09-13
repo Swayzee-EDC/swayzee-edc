@@ -6,7 +6,7 @@ date: '2024-09-11T16:00:00.000Z'
 tags:
   - announcement
   - meeting
-image: images/uploads/Public Forum 1 - fb.jpg
+image: /images/uploads/Public Forum 1 - fb.jpg
 ---
 Join us tonight for a public forum to help develop Swayzee's future! We want your input to guide the development of our town's 10-year plan.
 

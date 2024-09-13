@@ -3,7 +3,7 @@
     {{ if .enable }}
       <div id="banner" class="text-center text-2xl py-2">
         {{ if and (isset . "url") (gt (.url | len)  0) }}
-            <a href="{{ .url }}">
+            <a href="{{ .url | safeURL }}">
         {{ end }}
         {{ .text }}
         {{ if and (isset . "url") (gt (.url | len)  0) }}
