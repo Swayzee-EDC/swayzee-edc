@@ -35,7 +35,7 @@ enableRobotsTXT = true
   [params.banner]
     enable = true
     text = "Community survey now available! Click here!"
-    url = "/news/20240913-town-survey"
+    url = "/community-survey"
 
   [params.footer]
     name = "Swayzee Economic Development Corporation"
@@ -77,10 +77,16 @@ enableRobotsTXT = true
     weight = 3
 
   [[menu.main]]
+    identifier = "survey"
+    name = "Survey"
+    url = "/community-survey/"
+    weight = 4
+
+  [[menu.main]]
     identifier = "contact"
     name = "Contact"
     url = "/contact/"
-    weight = 4
+    weight = 5
 
   # Footer Menu
 #  [[menu.footer]]
