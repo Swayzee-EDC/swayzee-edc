@@ -7,7 +7,7 @@ tags:
   - announcement
   - meeting
 description: Help shape the future of our town!
-image: /images/uploads/public-forum-1-banner.jpg
+image: images/uploads/public-forum-1-banner.jpg
 ---
 The Swayzee Economic Development Corporation (EDC) has partnered with Ball State University to design a 10-year town plan which will help guide our community's growth over the coming decade. When complete, this plan will define what our town wants Swayzee to look like in 2035 and will prioritize the improvements that must be made to reach that vision.
 

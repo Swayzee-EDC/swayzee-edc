@@ -34,7 +34,7 @@ enableRobotsTXT = true
   
   [params.banner]
     enable = true
-    text = "Town survey now available! Click here!"
+    text = "Community survey now available! Click here!"
     url = "news/20240913-town-survey"
 
   [params.footer]
