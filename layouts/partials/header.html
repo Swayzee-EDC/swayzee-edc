@@ -1,7 +1,7 @@
 <header>
     {{ with .Site.Params.banner }}
     {{ if .enable }}
-      <div id="banner" class="text-center text-2xl py-2">
+      <div id="banner" class="text-center lg:text-2xl text-lg py-2">
         {{ if and (isset . "url") (gt (.url | len)  0) }}
             <a href="{{ .url | safeURL }}">
         {{ end }}

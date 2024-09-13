@@ -15,11 +15,11 @@ less than 10 minutes to complete.
 Please complete the survey using one of the following methods by **Monday, Sept. 30, 2024**:
 
 #### Method 1: Fill out the online survey (recommended)
-{{< button newwindow=true url="https://qualtricsxmn7gbn5ny6.qualtrics.com/jfe/form/SV_eo06gwg727gI7zg">}}Click here{{< /button >}}
+{{< button newwindow=true url="https://qualtricsxmn7gbn5ny6.qualtrics.com/jfe/form/SV_eo06gwg727gI7zg">}}Complete online{{< /button >}}
 
 #### Method 2: Fill out the printable survey
 
-{{< button newwindow=true url="/docs/2024-swayzee-community-survey.pdf" >}}Download PDF{{< /button >}}
+{{< button newwindow=true url="/docs/2024-swayzee-community-survey.pdf" >}}Download{{< /button >}}
 
 Download the printable survey at the above link and complete the survey by hand.
 **Please do not include your name or other identifying information.**
