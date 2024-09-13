@@ -3,6 +3,11 @@
  You can change the article headings, fonts, colors, etc.
 */
 
+#banner {
+    background-color: #41a1ad;
+    color: white;
+}
+
 #overlay {
     background-color: #41a1ad;
 }
@@ -58,7 +63,6 @@
 [class*="iconextra-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon_extra' !important;
-    speak: never;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;

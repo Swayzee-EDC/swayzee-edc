@@ -31,6 +31,11 @@ enableRobotsTXT = true
     # The size parameter is the class name of tailwindcss
     # https://tailwindcss.com/
     size = "lg:h-24 md:h-24 h-20"
+  
+  [params.banner]
+    enable = true
+    text = "Community survey now available! Click here!"
+    url = "/community-survey"
 
   [params.footer]
     name = "Swayzee Economic Development Corporation"
@@ -72,10 +77,16 @@ enableRobotsTXT = true
     weight = 3
 
   [[menu.main]]
+    identifier = "survey"
+    name = "Survey"
+    url = "/community-survey/"
+    weight = 4
+
+  [[menu.main]]
     identifier = "contact"
     name = "Contact"
     url = "/contact/"
-    weight = 4
+    weight = 5
 
   # Footer Menu
 #  [[menu.footer]]

@@ -1,4 +1,17 @@
 <header>
+    {{ with .Site.Params.banner }}
+    {{ if .enable }}
+      <div id="banner" class="text-center lg:text-2xl text-lg py-2">
+        {{ if and (isset . "url") (gt (.url | len)  0) }}
+            <a href="{{ .url | safeURL }}">
+        {{ end }}
+        {{ .text }}
+        {{ if and (isset . "url") (gt (.url | len)  0) }}
+            </a>
+        {{ end }}
+      </div>
+    {{ end }}
+    {{ end }}
     <div id="overlay">
         <ul class="text-center list-none text-white text-3xl">
             {{ range .Site.Menus.main }}
