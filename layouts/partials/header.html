@@ -1,5 +1,17 @@
 <header>
-    <div id="banner" class="text-center text-2xl py-2"><a href="">Town survey now available! Click here!</a></div>
+    {{ with .Site.Params.banner }}
+    {{ if .enable }}
+      <div id="banner" class="text-center text-2xl py-2">
+        {{ if and (isset . "url") (gt (.url | len)  0) }}
+            <a href="{{ .url }}">
+        {{ end }}
+        {{ .text }}
+        {{ if and (isset . "url") (gt (.url | len)  0) }}
+            </a>
+        {{ end }}
+      </div>
+    {{ end }}
+    {{ end }}
     <div id="overlay">
         <ul class="text-center list-none text-white text-3xl">
             {{ range .Site.Menus.main }}

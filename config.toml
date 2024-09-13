@@ -31,6 +31,11 @@ enableRobotsTXT = true
     # The size parameter is the class name of tailwindcss
     # https://tailwindcss.com/
     size = "lg:h-24 md:h-24 h-20"
+  
+  [params.banner]
+    enable = true
+    text = "Town survey now available! Click here!"
+    url = "news/20240913-town-survey"
 
   [params.footer]
     name = "Swayzee Economic Development Corporation"
