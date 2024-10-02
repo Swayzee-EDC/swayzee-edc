@@ -33,7 +33,7 @@ enableRobotsTXT = true
     size = "lg:h-24 md:h-24 h-20"
   
   [params.banner]
-    enable = true
+    enable = false
     text = "Community survey now available! Click here!"
     url = "/community-survey"
 
