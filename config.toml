@@ -33,9 +33,9 @@ enableRobotsTXT = true
     size = "lg:h-24 md:h-24 h-20"
   
   [params.banner]
-    enable = false
-    text = "Community survey now available! Click here!"
-    url = "/community-survey"
+    enable = true
+    text = "Survey results meeting scheduled for Oct. 16"
+    url = "/news/20241003-survey-results/"
 
   [params.footer]
     name = "Swayzee Economic Development Corporation"
@@ -76,11 +76,11 @@ enableRobotsTXT = true
     url = "/news/"
     weight = 3
 
-  [[menu.main]]
-    identifier = "survey"
-    name = "Survey"
-    url = "/community-survey/"
-    weight = 4
+#  [[menu.main]]
+#    identifier = "survey"
+#    name = "Survey"
+#    url = "/community-survey/"
+#    weight = 4
 
   [[menu.main]]
     identifier = "contact"
