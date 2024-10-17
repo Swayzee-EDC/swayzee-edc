@@ -33,9 +33,9 @@ enableRobotsTXT = true
     size = "lg:h-24 md:h-24 h-20"
   
   [params.banner]
-    enable = true
-    text = "Survey results meeting scheduled for Oct. 16"
-    url = "/news/20241003-survey-results/"
+    enable = false
+    text = ""
+    url = ""
 
   [params.footer]
     name = "Swayzee Economic Development Corporation"
