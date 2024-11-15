@@ -13,6 +13,6 @@ On Oct. 16th, [we met at the Swayzee Community Church](https://onlyswayzee.org/n
 
 Please join us for a **Town Plan Review Meeting** at the **Swayzee Community Church** on **Wednesday, November 20, 2024 at 6pm** to provide your feedback on the draft of the town plan!
 
-**Nov. 20, 2024 at 6pm**
-**Swayzee Community Church**
+**Nov. 20, 2024 at 6pm**\
+**Swayzee Community Church**\
 **306 South Washington Street**
