@@ -33,7 +33,7 @@
         </section>
         {{ if .Params.image }}
         <div class="flex justify-center items-center">
-            <img class="my-4 object-cover w-3/4" src="{{ .Params.image | absURL }}">
+            <img class="my-4 object-cover w-3/4" src="{{ .Params.image | relURL }}">
         </div>
         {{ end }}
         <div class="content prose md:prose-lg lg:prose-xl max-w-none py-1">{{.Content}}</div>
