@@ -12,6 +12,14 @@
     background-color: #41a1ad;
 }
 
+#current-page {
+    background-color: #374151;
+}
+
+#adjacent-page {
+    color: #374151;
+}
+
 .personnel-wrapper img 
 {
     margin: 0;
