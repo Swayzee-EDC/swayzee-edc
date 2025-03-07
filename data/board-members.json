@@ -1,5 +1,8 @@
 [
     {
+        "name": "Tyler Bundrick"
+    },
+    {
         "name": "Kenny Cates"
     },
     {
@@ -12,6 +15,9 @@
         "image": "images/personnel/King-Harold.png"
     },
     {
+        "name": "Nate King"
+    },
+    {
         "name": "Seth Parker",
         "image": "images/personnel/Parker-Seth.png"
     },
@@ -19,17 +25,19 @@
         "name": "Derek Patterson"
     },
     {
+        "name": "Nick Pritchett"
+    },
+    {
         "name": "Mike Shrock"
+    },
+    {
+        "name": "Luke Thompson"
     },
     {
         "name": "Marilyn Watts",
         "image": "images/personnel/Watts-Marilyn.png"
     },
     {
-        "name": "Kip Worrel",
-        "image": "images/personnel/Worrel-Kip.png"
-    },
-    {
-        "name": "John Zwirn"
+        "name": "Wayne Westgate"
     }
 ]
