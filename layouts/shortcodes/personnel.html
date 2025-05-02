@@ -10,7 +10,9 @@
         {{ $image_fit := false }}
         {{ if $image }}
           {{ $image_fit = $image.Fit "1000x1000 jpg q90" | resources.Fingerprint }}
-          {{ $image_webp = $image.Fit "1000x1000 webp" | resources.Fingerprint }}
+          {{ if not (hasSuffix .image ".webp") }}
+            {{ $image_webp = $image.Fit "1000x1000 webp" | resources.Fingerprint }}
+          {{ end }}
           {{ $image = $image | resources.Fingerprint }}
         {{ end }}
         {{ $image = default $image $logo }}
@@ -20,9 +22,9 @@
                 <source loading="lazy" srcset="{{ $image_webp.Permalink }}" type="image/webp" alt="{{ $name }}">
                 {{ end }}
                 {{ if $image_fit }}
-                <img class="w-60 aspect-square rounded-full" loading="lazy" src="{{ $image_fit.Permalink }}" alt="{{ $name }}">
+                <img class="w-60 aspect-square rounded-full" loading="lazy" src="{{ $image_fit.RelPermalink }}" alt="{{ $name }}">
                 {{ else }}
-                <img class="w-60 aspect-square rounded-full" loading="lazy" src="{{ $image.Permalink }}" alt="{{ $name }}">
+                <img class="w-60 aspect-square rounded-full" loading="lazy" src="{{ $image.RelPermalink }}" alt="{{ $name }}">
                 {{ end }}
             </picture>
         </div>

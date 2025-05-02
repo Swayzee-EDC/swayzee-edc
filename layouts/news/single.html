@@ -33,7 +33,24 @@
         </section>
         {{ if .Params.image }}
         <div class="flex justify-center items-center">
-            <img class="my-4 object-cover w-3/4" src="{{ .Params.image | relURL }}">
+            {{ $image := .Params.image }}
+            {{ if hasPrefix $image "http" }}
+            <img class="my-4 object-cover w-3/4" src="{{ $image }}">
+            {{ else }}
+            {{ $image = resources.Get $image }}
+            {{ $srcs := slice }}
+            {{ $sizes := slice 600 800 1130 1390 1600 1760 1920 2048 }}
+            {{ range $v := $sizes }}
+                {{ if lt $v $image.Width }}
+                    {{ $dims := printf "%dx%d webp" $v $v}}
+                    {{ $img_sm := $image.Fit $dims | resources.Fingerprint }}
+                    {{ $src := printf "%s %dw" $img_sm.RelPermalink $img_sm.Width }}
+                    {{ $srcs = $srcs | append $src }}
+                {{ end }}
+            {{ end }}
+            {{ $image = $image.Fit "300x300 webp" | resources.Fingerprint }}
+            <img class="my-4 object-cover w-3/4" loading="lazy" src="{{ $image.RelPermalink }}" srcset="{{ delimit $srcs ", " }}">
+            {{ end }}
         </div>
         {{ end }}
         <div class="content prose md:prose-lg lg:prose-xl max-w-none py-1">{{.Content}}</div>

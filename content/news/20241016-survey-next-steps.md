@@ -24,7 +24,7 @@ To name just a few, our existing small businesses are civic-minded and family-ow
 
 With these assets in mind, the Ball State team wrote a community vision statement which will serve as a guiding light during the further development of Swayzee's comprehensive plan:
 
-{{< figure src="/images/uploads/202410-community-vision.webp" class="w-3/4" >}}
+{{< figure src="/images/news/202410-community-vision.jpg" class="w-3/4" >}}
 
 ### What's next?
 As we head into November, the Ball State team will collect their research and write a complete draft of Swayzee's comprehensive plan.

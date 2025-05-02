@@ -21,12 +21,11 @@ export default defineConfig({
   },
   media: {
       tina: {
-          mediaRoot: "images/uploads",
-          publicFolder: "static",
+          mediaRoot: "images",
+          publicFolder: "assets",
       },
-      accept: ['image/jpeg', 'image/webp', 'image/png']
+      accept: ['image/jpeg', 'image/webp', 'image/png', 'image/svg']
   },
-  // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
       collections: [
         {

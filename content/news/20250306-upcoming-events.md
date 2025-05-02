@@ -6,7 +6,7 @@ date: '2025-03-06T17:00:00.000Z'
 tags:
   - local business
   - events
-image: /images/uploads/202503-coming-soon.webp
+image: /images/news/202503-coming-soon.jpg
 ---
 
 Spring is just around the corner, and with the warmer weather comes the opportunity to 

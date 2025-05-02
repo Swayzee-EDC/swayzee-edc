@@ -6,7 +6,7 @@ date: '2024-10-03T23:45:00.000Z'
 tags:
   - announcement
   - meeting
-image: /images/uploads/202409-town-forum.webp
+image: /images/news/202409-town-forum.jpg
 ---
 
 September was an exciting and busy month! 

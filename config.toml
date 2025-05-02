@@ -106,3 +106,20 @@ enableRobotsTXT = true
 #    url = "https://github.com/opera7133/tella"
 #    pre = "<i class='icon-github text-2xl'></i>"
 #      weight = 2
+
+[module]
+[[module.mounts]]
+source = "static"
+target = "static"
+[[module.mounts]]
+source = "static/images"
+target = "static/images"
+[[module.mounts]]
+source = "assets/images"
+target = "static/images"
+[[module.mounts]]
+source = "assets/images/personnel"
+target = "static/images/personnel"
+[[module.mounts]]
+source = "assets/images/slider"
+target = "static/images/slider"

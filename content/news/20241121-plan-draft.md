@@ -6,7 +6,7 @@ date: '2024-11-21T12:00:00.000Z'
 tags:
   - announcement
   - meeting
-image: /images/uploads/the-swayzee-way.webp
+image: /images/news/the-swayzee-way.jpg
 description: A draft of the town's 10-year comprehensive plan is now available
 ---
 

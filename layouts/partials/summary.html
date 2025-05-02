@@ -1,11 +1,27 @@
 <div
   class="sans w-full px-2 lg:max-w-full lg:flex mt-3 lg:px-0 duration-500 transform hover:-translate-y-1 hover:shadow-md">
   {{ if .Params.image }}
-  <img id="thumb" alt="{{.Title}}" class="aspect-video object-cover w-auto lg:h-44"
-    src="{{ .Params.image | relURL }}" />
+    {{ $image := .Params.image }}
+    {{ if hasPrefix $image "http" }}
+    <img id="thumb" alt="{{.Title}}" class="aspect-video object-cover w-auto lg:h-44" src='{{ $image }}'>
+    {{ else }}
+    {{ $image = resources.Get $image }}
+    {{ $srcs := slice }}
+    {{ $sizes := slice 600 800 1130 1390 1600 1760 1920 2048 }}
+    {{ range $v := $sizes }}
+        {{ if lt $v $image.Width }}
+            {{ $dims := printf "%dx%d webp" $v $v}}
+            {{ $img_sm := $image.Fit $dims | resources.Fingerprint }}
+            {{ $src := printf "%s %dw" $img_sm.RelPermalink $img_sm.Width }}
+            {{ $srcs = $srcs | append $src }}
+        {{ end }}
+    {{ end }}
+    {{ $image = $image.Fit "300x300 webp" | resources.Fingerprint }}
+    <img id="thumb" alt="{{.Title}}" class="aspect-video object-cover w-auto lg:h-44" loading="lazy" src="{{ $image }}" src="{{ $image.RelPermalink }}" srcset="{{ delimit $srcs ", " }}">
+    {{ end }}
   {{ else }}
-  <img id="thumb" alt="{{.Title}}" class="aspect-video object-cover w-auto lg:h-44"
-    src='{{ "/images/default.jpg" | relURL }}'>
+  {{ $image := (resources.Get "/images/default.jpg").RelPermalink }}
+  <img id="thumb" alt="{{.Title}}" class="aspect-video object-cover w-auto lg:h-44" src='{{ $image }}'>
   {{ end }}
   <div
     class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 relative pl-4 p-6 justify-between leading-normal max-w-full w-full">
