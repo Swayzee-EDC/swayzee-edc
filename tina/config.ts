@@ -30,7 +30,7 @@ export default defineConfig({
     collections: [
       {
         name: "news",
-        label: "Post",
+        label: "News post",
         path: "content/news",
         fields: [
           { type: "string", name: "title", label: "Title", isTitle: true, required: true, },
