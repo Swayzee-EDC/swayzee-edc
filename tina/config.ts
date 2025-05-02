@@ -16,43 +16,80 @@ export default defineConfig({
   token: process.env.TINA_TOKEN,
 
   build: {
-    outputFolder: "admin",
-    publicFolder: "static",
+      outputFolder: "admin",
+      publicFolder: "static",
   },
   media: {
-    tina: {
-      mediaRoot: "images/uploads",
-      publicFolder: "static",
-    },
+      tina: {
+          mediaRoot: "images/uploads",
+          publicFolder: "static",
+      },
+      accept: ['image/jpeg', 'image/webp', 'image/png']
   },
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
-    collections: [
-      {
-        name: "news",
-        label: "News post",
-        path: "content/news",
-        fields: [
-          { type: "string", name: "title", label: "Title", isTitle: true, required: true, },
-          { type: "string", name: "description", label: "Description", },
-          { type: "string", name: "author", label: "Author", },
-          { 
-            type: "datetime", name: "date", label: "Publish Date",
-            ui: {
-              timeFormat: "HH:mm"
-            }, 
+      collections: [
+        {
+          name: "news",
+          label: "News",
+          path: "content/news",
+          ui: {
+              filename: {
+                  readonly: true,
+                  slugify: (values) => {
+                      const postDate = values.date ? new Date(values.date) : new Date();
+                      return `${postDate.toISOString().split("T")[0].replace(/-/g, "")}-${values?.title?.toLowerCase()
+              .replace(/ /g, "-").replace(/[^a-zA-Z0-9-]/g, '')}`
+                  },
+              },
           },
-          {
-            type: "image", label: "Feature image", name: "image"
-          },
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
-          },
-        ],
-      },
-    ],
+          fields: [
+              {
+                  type: "string",
+                  name: "title",
+                  label: "Title",
+                  isTitle: true,
+                  required: true,
+              },
+              {
+                  type: "string",
+                  name: "author",
+                  label: "Author",
+              },
+              {
+                  type: "datetime",
+                  name: "date",
+                  label: "Publish Date",
+                  required: true,
+                  description: 'Posts will appear around 8:00am local time on the given date'
+              },
+              {
+                  name: 'draft',
+                  label: 'Draft',
+                  type: 'boolean',
+                  description: 'If this is checked the post will not be published',
+              },
+              {
+                  type: "image",
+                  label: "Featured image",
+                  name: "image",
+                  description: "Image which appears at the top of the post"
+              },
+              {
+                  type: "rich-text",
+                  name: "body",
+                  label: "Body",
+                  isBody: true,
+              },
+          ],
+          defaultItem: () => {
+            return {
+              "author": "Swayzee EDC",
+              "date": Date(),
+              "draft": false,
+            }
+          }
+       }, 
+      ],
   },
 });

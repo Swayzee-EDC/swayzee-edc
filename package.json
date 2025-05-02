@@ -25,6 +25,7 @@
     "tailwindcss": "^3.1.6"
   },
   "dependencies": {
+    "js-beautify": "^1.15.4",
     "tinacms": "^2.7.5"
   }
 }
