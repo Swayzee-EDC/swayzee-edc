@@ -22,4 +22,7 @@ npm run build
 ```shell
 # start the web server
 hugo server --port 3000
+
+# Run the dev server with local Tina CMS support
+npm run start:tina
 ```
