@@ -37,6 +37,101 @@ export default defineConfig({
   schema: {
       collections: [
         {
+          name: "pages",
+          label: "Pages",
+          path: "content",
+          match: {
+            include: "*",
+            exclude: "*/"
+          },
+          ui: {
+            filename: {
+              readonly: false,
+            },
+          },
+          fields: [
+            {
+                type: "string",
+                name: "title",
+                label: "Title",
+                isTitle: true,
+                required: true,
+            },
+            {
+                type: "string",
+                name: "author",
+                label: "Author",
+            },
+            {
+                type: "datetime",
+                name: "date",
+                label: "Publish Date",
+                required: true,
+                description: 'Pages will appear around 8:00am local time on the given date'
+            },
+            {
+                name: 'draft',
+                label: 'Draft',
+                type: 'boolean',
+                description: 'If this is checked the page will not be published',
+            },
+            {
+                type: "rich-text",
+                name: "body",
+                label: "Body",
+                isBody: true,
+                templates: [
+                  {
+                    name: 'gmap',
+                    label: 'Google Maps',
+                    match: {
+                      start: '{{<',
+                      end: '>}}',
+                    },
+                    fields: [
+                      {
+                        name: '_value',
+                        label: 'Location',
+                        type: 'string',
+                        required: true,
+                      },
+                    ],
+                  },
+                  {
+                    name: 'personnel',
+                    label: 'Personnel',
+                    match: {
+                      start: '{{<',
+                      end: '>}}',
+                    },
+                    fields: [
+                      {
+                        name: 'src',
+                        label: 'Source',
+                        type: 'string',
+                        required: true,
+                      },
+                    ],
+                  },
+                ],
+            },
+            {
+              type: "string",
+              name: "aliases",
+              label: "Page aliases",
+              description: 'Alternative page names (URL suffixes) for accessing this page',
+              list: true,
+            },
+          ],
+          defaultItem: () => {
+            return {
+              "author": "Swayzee EDC",
+              "date": Date(),
+              "draft": false,
+            }
+          }
+        },
+        {
           name: "news",
           label: "News",
           path: "content/news",
