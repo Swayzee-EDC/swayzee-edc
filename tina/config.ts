@@ -248,6 +248,71 @@ export default defineConfig({
               ],
             },
         ]
+        },
+        {
+          name: "slider",
+          label: "Slider",
+          path: "data",
+          match: {
+            include: "slide",
+          },
+          ui: {
+            allowedActions: {
+              create: false,
+              delete: false,
+              createNestedFolder: false,
+            }
+          },
+          format: 'json',
+          fields: [
+            {
+              type: "object",
+              label: "Items",
+              description: "Slider items (in display order)",
+              name: "items",
+              list: true,
+              ui: {
+                itemProps: (item) => {
+                  var label = item?.title ? item?.title : "[Empty entry]";
+                  if (item?.image) {
+                    label = label + "  🖼️";
+                  }
+                  return { label: label };
+                }
+              },
+              fields: [
+                {
+                  label: "Text",
+                  name: "title",
+                  type: "string",
+                  required: true,
+                },
+                {
+                  type: "image",
+                  label: "Image",
+                  name: "image",
+                  required: true,
+                },
+                {
+                  type: "string",
+                  label: "Text color",
+                  name: "color",
+                  ui: {
+                    component: "select",
+                    options: [
+                      {value: "text-white", "label": "White"}, 
+                      {value: "text-black", "label": "Black"},
+                    ]
+                  }
+                }
+              ],
+              defaultItem: () => {
+                return {
+                  "color": "text-white",
+                }
+              }
+            },
+        ]
         } 
       ],
   },
