@@ -107,11 +107,11 @@ enableRobotsTXT = true
 #    pre = "<i class='fa-sharp fa-solid fa-house'></i>"
 #      weight = 1
 
-#  [[menu.footer]]
-#    name = "Github"
-#    url = "https://github.com/opera7133/tella"
-#    pre = "<i class='icon-github text-2xl'></i>"
-#      weight = 2
+  [[menu.footer]]
+    name = "Facebook"
+    url = "https://www.facebook.com/onlyswayzee"
+    pre = "<i class='icon-facebook text-2xl'></i>"
+      weight = 2
 
 [module]
 [[module.mounts]]
