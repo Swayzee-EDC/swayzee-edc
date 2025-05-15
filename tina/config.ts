@@ -191,7 +191,64 @@ export default defineConfig({
               "draft": false,
             }
           }
-       }, 
+        },
+        {
+          name: "personnel",
+          label: "Personnel",
+          path: "data",
+          match: {
+            include: "{officers,board-members}",
+          },
+          ui: {
+            allowedActions: {
+              create: false,
+              delete: false,
+              createNestedFolder: false,
+            }
+          },
+          format: 'json',
+          fields: [
+            {
+              type: "object",
+              label: "Member",
+              description: "Members of the personnel list (in display order)",
+              name: "members",
+              list: true,
+              ui: {
+                itemProps: (item) => {
+                  var label = item?.name ? item?.name : "[Unnamed entry]";
+                  if (item?.title) {
+                    label = label + " (" + item.title + ")";
+                  }
+                  if (item?.image) {
+                    label = label + "  🖼️";
+                  }
+                  return { label: label };
+                }
+              },
+              fields: [
+                {
+                  label: "Name",
+                  name: "name",
+                  type: "string",
+                  required: true,
+                },
+                {
+                  label: "Title",
+                  name: "title",
+                  type: "string",
+                  description: "Optional, e.g. President, Treasurer, Secretary"
+                },
+                {
+                  type: "image",
+                  label: "Image",
+                  name: "image",
+                  description: "Optional"
+              },
+              ],
+            },
+        ]
+        } 
       ],
   },
 });
