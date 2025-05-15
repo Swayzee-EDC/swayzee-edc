@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0a8dce28-a380-4270-b0a0-93ba62b9aab5/deploy-status)](https://app.netlify.com/sites/swayzee-edc/deploys)
+
 # Dependencies
 - npm
 - hugo
@@ -21,6 +23,6 @@ npm run build
 # start the web server
 hugo server --port 3000
 
-# in a new terminal, start the visual editor
-stackbit dev
+# Run the dev server with local Tina CMS support
+npm run start:tina
 ```

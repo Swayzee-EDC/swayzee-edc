@@ -1,15 +1,19 @@
-[
-  {
-    "title": "Building Indiana's future...",
-    "image": "images/slider/main-street.jpg",
-    "color": "text-black"
-  },
-  {
-    "title": "Growing our community...",
-    "image": "images/slider/family.jpg"
-  },
-  {
-    "title": "The only Swayzee in the world.",
-    "image": "images/slider/water-tower.png"
-  }
-]
+{
+  "items": [
+    {
+      "title": "Building Indiana's future...",
+      "image": "/images/slider/main-street.jpg",
+      "color": "text-black"
+    },
+    {
+      "title": "Growing our community...",
+      "image": "/images/slider/family.jpg",
+      "color": "text-white"
+    },
+    {
+      "title": "The only Swayzee in the world.",
+      "image": "/images/slider/water-tower.png",
+      "color": "text-white"
+    }
+  ]
+}

@@ -1,43 +1,45 @@
-[
+{
+  "members": [
     {
-        "name": "Tyler Bundrick"
+      "name": "Tyler Bundrick"
     },
     {
-        "name": "Kenny Cates"
+      "name": "Kenny Cates"
     },
     {
-        "name": "Rhonda Fagan",
-        "title": "Ex officio",
-        "image": "images/personnel/Fagan-Rhonda.png"
+      "name": "Rhonda Fagan",
+      "title": "Ex officio",
+      "image": "/images/personnel/Fagan-Rhonda.png"
     },
     {
-        "name": "Harold King",
-        "image": "images/personnel/King-Harold.png"
+      "name": "Harold King",
+      "image": "/images/personnel/King-Harold.png"
     },
     {
-        "name": "Nate King"
+      "name": "Nate King"
     },
     {
-        "name": "Seth Parker",
-        "image": "images/personnel/Parker-Seth.png"
+      "name": "Seth Parker",
+      "image": "/images/personnel/Parker-Seth.png"
     },
     {
-        "name": "Derek Patterson"
+      "name": "Derek Patterson"
     },
     {
-        "name": "Nick Pritchett"
+      "name": "Nick Pritchett"
     },
     {
-        "name": "Mike Shrock"
+      "name": "Mike Shrock"
     },
     {
-        "name": "Luke Thompson"
+      "name": "Luke Thompson"
     },
     {
-        "name": "Marilyn Watts",
-        "image": "images/personnel/Watts-Marilyn.png"
+      "name": "Marilyn Watts",
+      "image": "/images/personnel/Watts-Marilyn.png"
     },
     {
-        "name": "Wayne Westgate"
+      "name": "Wayne Westgate"
     }
-]
+  ]
+}

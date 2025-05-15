@@ -1,6 +1,7 @@
 <div class="swiper-container">
     <div class="swiper-wrapper">
-        {{ range .Site.Data.slide }}
+        {{ range index .Site.Data.slide "items" }}
+        {{ if and .title .image }}
         <div class="swiper-slide">
             {{ $image := .image }}
             {{ $image = resources.Get $image }}
@@ -20,6 +21,7 @@
                 <h1 class="text-4xl {{ or .color "text-white" }}">{{ .title }}</h1>
             </div>
         </div>
+        {{ end }}
         {{ end }}
     </div>
     <div class="swiper-button-prev"></div>

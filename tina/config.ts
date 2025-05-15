@@ -37,6 +37,101 @@ export default defineConfig({
   schema: {
       collections: [
         {
+          name: "pages",
+          label: "Pages",
+          path: "content",
+          match: {
+            include: "*",
+            exclude: "*/"
+          },
+          ui: {
+            filename: {
+              readonly: false,
+            },
+          },
+          fields: [
+            {
+                type: "string",
+                name: "title",
+                label: "Title",
+                isTitle: true,
+                required: true,
+            },
+            {
+                type: "string",
+                name: "author",
+                label: "Author",
+            },
+            {
+                type: "datetime",
+                name: "date",
+                label: "Publish Date",
+                required: true,
+                description: 'Pages will appear around 8:00am local time on the given date'
+            },
+            {
+                name: 'draft',
+                label: 'Draft',
+                type: 'boolean',
+                description: 'If this is checked the page will not be published',
+            },
+            {
+                type: "rich-text",
+                name: "body",
+                label: "Body",
+                isBody: true,
+                templates: [
+                  {
+                    name: 'gmap',
+                    label: 'Google Maps',
+                    match: {
+                      start: '{{<',
+                      end: '>}}',
+                    },
+                    fields: [
+                      {
+                        name: '_value',
+                        label: 'Location',
+                        type: 'string',
+                        required: true,
+                      },
+                    ],
+                  },
+                  {
+                    name: 'personnel',
+                    label: 'Personnel',
+                    match: {
+                      start: '{{<',
+                      end: '>}}',
+                    },
+                    fields: [
+                      {
+                        name: 'src',
+                        label: 'Source',
+                        type: 'string',
+                        required: true,
+                      },
+                    ],
+                  },
+                ],
+            },
+            {
+              type: "string",
+              name: "aliases",
+              label: "Page aliases",
+              description: 'Alternative page names (URL suffixes) for accessing this page',
+              list: true,
+            },
+          ],
+          defaultItem: () => {
+            return {
+              "author": "Swayzee EDC",
+              "date": Date(),
+              "draft": false,
+            }
+          }
+        },
+        {
           name: "news",
           label: "News",
           path: "content/news",
@@ -96,7 +191,129 @@ export default defineConfig({
               "draft": false,
             }
           }
-       }, 
+        },
+        {
+          name: "personnel",
+          label: "Personnel",
+          path: "data",
+          match: {
+            include: "{officers,board-members}",
+          },
+          ui: {
+            allowedActions: {
+              create: false,
+              delete: false,
+              createNestedFolder: false,
+            }
+          },
+          format: 'json',
+          fields: [
+            {
+              type: "object",
+              label: "Member",
+              description: "Members of the personnel list (in display order)",
+              name: "members",
+              list: true,
+              ui: {
+                itemProps: (item) => {
+                  var label = item?.name ? item?.name : "[Unnamed entry]";
+                  if (item?.title) {
+                    label = label + " (" + item.title + ")";
+                  }
+                  if (item?.image) {
+                    label = label + "  🖼️";
+                  }
+                  return { label: label };
+                }
+              },
+              fields: [
+                {
+                  label: "Name",
+                  name: "name",
+                  type: "string",
+                  required: true,
+                },
+                {
+                  label: "Title",
+                  name: "title",
+                  type: "string",
+                  description: "Optional, e.g. President, Treasurer, Secretary"
+                },
+                {
+                  type: "image",
+                  label: "Image",
+                  name: "image",
+                  description: "Optional"
+              },
+              ],
+            },
+        ]
+        },
+        {
+          name: "slider",
+          label: "Slider",
+          path: "data",
+          match: {
+            include: "slide",
+          },
+          ui: {
+            allowedActions: {
+              create: false,
+              delete: false,
+              createNestedFolder: false,
+            }
+          },
+          format: 'json',
+          fields: [
+            {
+              type: "object",
+              label: "Items",
+              description: "Slider items (in display order)",
+              name: "items",
+              list: true,
+              ui: {
+                itemProps: (item) => {
+                  var label = item?.title ? item?.title : "[Empty entry]";
+                  if (item?.image) {
+                    label = label + "  🖼️";
+                  }
+                  return { label: label };
+                }
+              },
+              fields: [
+                {
+                  label: "Text",
+                  name: "title",
+                  type: "string",
+                  required: true,
+                },
+                {
+                  type: "image",
+                  label: "Image",
+                  name: "image",
+                  required: true,
+                },
+                {
+                  type: "string",
+                  label: "Text color",
+                  name: "color",
+                  ui: {
+                    component: "select",
+                    options: [
+                      {value: "text-white", "label": "White"}, 
+                      {value: "text-black", "label": "Black"},
+                    ]
+                  }
+                }
+              ],
+              defaultItem: () => {
+                return {
+                  "color": "text-white",
+                }
+              }
+            },
+        ]
+        } 
       ],
   },
 });

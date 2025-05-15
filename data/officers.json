@@ -1,22 +1,24 @@
-[
+{
+  "members": [
     {
-        "name": "Don Thompson",
-        "title": "President",
-        "image": "images/personnel/Thompson-Don.png"
+      "name": "Don Thompson",
+      "title": "President",
+      "image": "/images/personnel/Thompson-Don.png"
     },
     {
-        "name": "John Key",
-        "title": "Vice President",
-        "image": "images/personnel/Key-John.png"
+      "name": "John Key",
+      "title": "Vice President",
+      "image": "/images/personnel/Key-John.png"
     },
     {
-        "name": "Andrew Wood",
-        "title": "Treasurer",
-        "image": "images/personnel/Wood-Andrew.png"
+      "name": "Andrew Wood",
+      "title": "Treasurer",
+      "image": "/images/personnel/Wood-Andrew.png"
     },
     {
-        "name": "Lisa Boswell",
-        "title": "Secretary",
-        "image": "images/personnel/Boswell-Lisa.png"
+      "name": "Lisa Boswell",
+      "title": "Secretary",
+      "image": "/images/personnel/Boswell-Lisa.png"
     }
-]
+  ]
+}
