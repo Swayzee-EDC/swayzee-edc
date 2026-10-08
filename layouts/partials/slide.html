@@ -1,29 +1,29 @@
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-        {{ range index .Site.Data.slide "items" }}
-        {{ if and .title .image }}
-        <div class="swiper-slide">
-            {{ $image := .image }}
-            {{ $image = resources.Get $image }}
-            {{ $srcs := slice }}
-            {{ $sizes := slice 600 800 1130 1390 1600 1760 1920 2048 }}
-            {{ range $v := $sizes }}
-                {{ if lt $v $image.Width }}
-                    {{ $dims := printf "%dx%d webp" $v $v}}
-                    {{ $img_sm := $image.Fit $dims | resources.Fingerprint }}
-                    {{ $src := printf "%s %dw" $img_sm.RelPermalink $img_sm.Width }}
-                    {{ $srcs = $srcs | append $src }}
+<div class="splide" role="group" aria-label="Top Page Slides">
+    <div class="splide__track">
+        <ul class="splide__list">
+            {{ range index .Site.Data.slide "items" }}
+            {{ if and .title .image }}
+            <li class="splide__slide">
+                {{ $image := .image }}
+                {{ $image = resources.Get $image }}
+                {{ $srcs := slice }}
+                {{ $sizes := slice 600 800 1130 1390 1600 1760 1920 2048 }}
+                {{ range $v := $sizes }}
+                    {{ if lt $v $image.Width }}
+                        {{ $dims := printf "%dx%d webp" $v $v}}
+                        {{ $img_sm := $image.Fit $dims | resources.Fingerprint }}
+                        {{ $src := printf "%s %dw" $img_sm.RelPermalink $img_sm.Width }}
+                        {{ $srcs = $srcs | append $src }}
+                    {{ end }}
                 {{ end }}
+                {{ $image = $image.Fit "300x300 webp" | resources.Fingerprint }}
+                <img loading="lazy" src="{{ $image.RelPermalink }}" srcset="{{ delimit $srcs ", " }}" alt="{{ .title }}">
+                <div class="s-fade-txt">
+                    <h1 class="text-4xl font-medium {{ or .color "text-white" }}">{{ .title }}</h1>
+                </div>
+            </li>
             {{ end }}
-            {{ $image = $image.Fit "300x300 webp" | resources.Fingerprint }}
-            <img loading="lazy" src="{{ $image.RelPermalink }}" srcset="{{ delimit $srcs ", " }}" alt="{{ .title }}">
-            <div class="s-fade-txt">
-                <h1 class="text-4xl {{ or .color "text-white" }}">{{ .title }}</h1>
-            </div>
-        </div>
-        {{ end }}
-        {{ end }}
+            {{ end }}
+        </ul>
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
 </div>

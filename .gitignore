@@ -140,3 +140,5 @@ public/
 # stackbit
 .stackbit/
 node_modules
+# hugo build stats (used by Tailwind)
+hugo_stats.json

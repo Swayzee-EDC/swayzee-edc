@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "git submodule update --remote --merge && tinacms build && npm run build"
+command = "git submodule update --init && tinacms build && npm run build"
 
 [build.environment]
 NODE_VERSION = "24"
