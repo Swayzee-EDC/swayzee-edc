@@ -2,9 +2,8 @@
   {{ if not .IsHome }}
   <script>
     function OnClickURL() {
-      const url = document.getElementById("url").dataset.clipboardText;
-      navigator.clipboard.writeText(url).then(function() {
-        alert('Copied the URL and title.');
+      navigator.clipboard.writeText("{{ .Permalink }}").then(function() {
+        alert('Copied the link.');
       }).catch(function(error) {
         console.error('Copy failed', error);
       });
