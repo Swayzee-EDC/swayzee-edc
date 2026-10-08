@@ -2,8 +2,12 @@
   {{ if not .IsHome }}
   <script>
     function OnClickURL() {
+      const label = document.querySelector("#url span");
       navigator.clipboard.writeText("{{ .Permalink }}").then(function() {
-        alert('Copied the link.');
+        if (!label) return;
+        clearTimeout(label.resetTimer);
+        label.textContent = "Copied!";
+        label.resetTimer = setTimeout(function() { label.textContent = "Copy"; }, 2000);
       }).catch(function(error) {
         console.error('Copy failed', error);
       });
