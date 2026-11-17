@@ -44,6 +44,16 @@
       {{ .Site.Params.footer.address_line2 }}<br />
       {{ .Site.Params.footer.address_line3 }}<br />
     </address>
+    {{ if or .Site.Params.footer.mission .Site.Params.footer.nonprofit }}
+    <div class="w-full text-base text-grey-900 mt-4 lg:mt-0 lg:w-auto lg:max-w-xl lg:mr-6">
+      {{ with .Site.Params.footer.mission }}
+      <p>{{ . }}</p>
+      {{ end }}
+      {{ with .Site.Params.footer.nonprofit }}
+      <p class="mt-2">{{ . }}</p>
+      {{ end }}
+    </div>
+    {{ end }}
     <div class="w-full block grow lg:flex lg:items-center lg:w-auto" id="mobileMenu">
       <div class="text-lg lg:grow">
       </div>
