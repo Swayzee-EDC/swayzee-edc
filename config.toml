@@ -42,6 +42,8 @@ enableRobotsTXT = true
     address_line1 = "213 S Washington Street"
     address_line2 = "PO Box 85"
     address_line3 = "Swayzee, IN 46986"
+    mission = "Swayzee Economic Development Corporation supports the town of Swayzee, Indiana through economic and community development."
+    nonprofit = "A 501(c)(3) nonprofit organization. EIN 93-2894556"
 
   [params.share]
     enable = true
