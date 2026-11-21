@@ -16,7 +16,7 @@
         <div class="rounded-xl overflow-hidden mb-8 aspect-video w-full shadow-md">
             {{ $image := .Params.image }}
             {{ if hasPrefix $image "http" }}
-            <img src="{{ $image }}" alt="{{ .Title }}" class="w-full h-full object-cover">
+            <img src="{{ $image }}" alt="{{ with .Params.imageAlt }}{{ . }}{{ else }}{{ .Title }}{{ end }}" class="w-full h-full object-cover">
             {{ else }}
             {{ $image = resources.Get $image }}
             {{ $srcs := slice }}
@@ -30,7 +30,7 @@
                 {{ end }}
             {{ end }}
             {{ $image = $image.Fit "300x300 webp" | resources.Fingerprint }}
-            <img loading="lazy" src="{{ $image.RelPermalink }}" srcset="{{ delimit $srcs ", " }}" alt="{{ .Title }}" class="w-full h-full object-cover">
+            <img loading="lazy" src="{{ $image.RelPermalink }}" srcset="{{ delimit $srcs ", " }}" alt="{{ with .Params.imageAlt }}{{ . }}{{ else }}{{ .Title }}{{ end }}" class="w-full h-full object-cover">
             {{ end }}
         </div>
         {{ end }}

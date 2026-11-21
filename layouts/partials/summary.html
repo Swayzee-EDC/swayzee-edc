@@ -2,7 +2,7 @@
   {{ if .Params.image }}
     {{ $image := .Params.image }}
     {{ if hasPrefix $image "http" }}
-    <img id="thumb" alt="{{.Title}}" class="aspect-video object-cover w-auto lg:h-44" src='{{ $image }}'>
+    <img id="thumb" alt="{{ with .Params.imageAlt }}{{ . }}{{ else }}{{ .Title }}{{ end }}" class="aspect-video object-cover w-auto lg:h-44" src='{{ $image }}'>
     {{ else }}
     {{ $image = resources.Get $image }}
     {{ $srcs := slice }}
@@ -16,7 +16,7 @@
         {{ end }}
     {{ end }}
     {{ $image = $image.Fit "300x300 webp" | resources.Fingerprint }}
-    <img id="thumb" alt="{{.Title}}" class="aspect-video object-cover w-auto lg:h-44" loading="lazy" src="{{ $image }}" src="{{ $image.RelPermalink }}" srcset="{{ delimit $srcs ", " }}">
+    <img id="thumb" alt="{{ with .Params.imageAlt }}{{ . }}{{ else }}{{ .Title }}{{ end }}" class="aspect-video object-cover w-auto lg:h-44" loading="lazy" src="{{ $image }}" src="{{ $image.RelPermalink }}" srcset="{{ delimit $srcs ", " }}">
     {{ end }}
   {{ else }}
   {{ $image := (resources.Get "/images/default.jpg").RelPermalink }}
