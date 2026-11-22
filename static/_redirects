@@ -1,8 +1,20 @@
 # Short links for onlyswayzee.org (Netlify).
 # Format, one redirect per line:
 # /short-path  https://destination  301
+#
+# Netlify matches these rules with the exact capitalization. Phones often
+# capitalize the first letter, so each link also has that capitalized form
+# (/Cameron, /CameronPost, /Cameronpost, /Facebook). Any other mix of capital
+# letters is handled by the 404 page, which sends the browser to the lowercased path.
+#
 # Use a path that is not already a page. Existing paths include /news, /about, /about-us, /contact, /calendar, /events, /projects, /loans, and /articles.
 
 /cameron      https://onlyswayzee.org/news/20261121-swayzees-own-cameron-balser-sets-trans-america-run-record/  301
+/Cameron      https://onlyswayzee.org/news/20261121-swayzees-own-cameron-balser-sets-trans-america-run-record/  301
+
 /cameronpost  https://www.facebook.com/onlyswayzee/posts/122198322818605222  301
+/CameronPost  https://www.facebook.com/onlyswayzee/posts/122198322818605222  301
+/Cameronpost  https://www.facebook.com/onlyswayzee/posts/122198322818605222  301
+
 /facebook     https://www.facebook.com/onlyswayzee  301
+/Facebook     https://www.facebook.com/onlyswayzee  301
