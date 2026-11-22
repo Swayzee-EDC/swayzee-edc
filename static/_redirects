@@ -1,0 +1,8 @@
+# Short links for onlyswayzee.org (Netlify).
+# Format, one redirect per line:
+# /short-path  https://destination  301
+# Use a path that is not already a page. Existing paths include /news, /about, /about-us, /contact, /calendar, /events, /projects, /loans, and /articles.
+
+/cameron      https://onlyswayzee.org/news/20261121-swayzees-own-cameron-balser-sets-trans-america-run-record/  301
+/cameronpost  https://www.facebook.com/onlyswayzee/posts/122198322818605222  301
+/facebook     https://www.facebook.com/onlyswayzee  301
